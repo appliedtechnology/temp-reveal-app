@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const path = require('path');
+const port = process.env.PORT || 4000;
 
 module.exports = {
   mode: "development",
@@ -93,12 +94,12 @@ module.exports = {
   ],
   devServer: {
     historyApiFallback: true,
-    port: 4000,
+    port,
     quiet: true,
     hot: true,
     proxy: {
       '/search': {
-        target: 'http://localhost:4000/search.html',
+        target: `/search.html`,
         pathRewrite: { '^/search': '' }
       },
     }
