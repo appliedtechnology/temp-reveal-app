@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .box {
+        background: linear-gradient(
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          indigo,
+          violet
+        );
+        text-shadow: 5px 5px 10px black;
+        width: 200px;
+        height: 200px;
+        border-style: solid;
+        border-width: 8px;
+        border-color: hotpink;
+        border-radius: 4px;
+        box-shadow: 2px 2px 12px 1px red;
+      }
+      .box > p {
+        font-size: 55px;
+        color: gold;
+      }
+      .box:hover > p {
+        color: red;
+        cursor: pointer;
+      }
+      p + button {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>Inside the box!</p>
+      <button>Adjacent sibling button</button>
+      <button>Secondary sibling button</button>
+    </div>
+  </body>
+</html>

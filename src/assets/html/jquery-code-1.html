@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <div class="example">
+    <p id="text">Some paragraph</p>
+    <p id="markup">Another paragraph</p>
+    <p>Markup:<span id="markup-as-text"></span></p>
+  </div>
+  <div class="controls">
+    <button id="btn-text">Add text</button>
+    <button id="btn-markup">Add markup</button>
+    <button id="btn-markup-as-text">Show markup as text</button>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script></body>
+  <script>
+  $(document).ready(() => {
+    $('#btn-text').click(() => {
+      $('#text').text('Lorem ut tempora... ');
+    });
+
+    $('#btn-markup').click(() => {
+      $('#markup').html('<b>Adipisicing accusantium...</b>')
+    });
+
+    $('#btn-markup-as-text').click(() => {
+      $('#markup-as-text').text($('#markup').html());
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <div id="cb-ex-container"></div>
+  <button onclick="cbExample();">Run</button>
+  <button onclick="cbExample(true);">Clear</button>
+  <script>
+    let cbExampleHasContent = false;
+
+    function somethingAsync(ms, callback) {
+      setTimeout(() => {
+        callback('Heavy calc done!');
+      }, ms);
+    }
+
+    function cbExample(clear = false) {
+      const el = document.getElementById('cb-ex-container');
+      if (clear) {
+        el.innerHTML = '';
+        cbExampleHasContent = false;
+      } else if (!cbExampleHasContent) {
+        cbExampleHasContent = true;
+        doCbExample()
+      }
+    }
+
+    function doCbExample() {
+      const el = document.getElementById('cb-ex-container');
+
+      el.innerHTML += 'Before<br>';
+      somethingAsync(2000, function(str) {
+        el.innerHTML += str;
+      });
+      el.innerHTML += 'After<br>';
+    }
+  </script>
+</body>
+</html>

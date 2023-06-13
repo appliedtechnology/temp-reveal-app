@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic HTML</title>
+</head>
+<body>
+  <div id="box-container"></div>
+
+  <button onclick="addBox();">Add Box</button>
+
+  <button onclick="clearBox();">Clear</button>
+  <script>
+    function addBox() {
+      const el = document.getElementById('box-container');
+      el.innerHTML += '<p>Love!</p>';
+    }
+    function clearBox() {
+      const el = document.getElementById('box-container');
+      el.innerHTML = '';
+    }
+  </script>
+</body>
+</html>

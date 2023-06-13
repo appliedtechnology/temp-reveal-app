@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    #ex-transition {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-gap: 2px;
+      align-items:end;
+      height: 200px;
+      width: 100%;
+    }
+    #ex-transition > div {
+      background-image: linear-gradient(#ff0000, #ffff00);
+      transition: height 800ms;
+      transition-timing-function: ease;
+    }
+  </style>
+  <script>
+    function generateValues() {
+      const bars = document.querySelectorAll('#ex-transition div');
+      bars.forEach(function(bar) {
+        const value = Math.round(Math.random() * 200);
+        bar.style.height = value + 'px';
+      });
+    }
+    setInterval(generateValues, 1000);
+  </script>
+</head>
+<body>
+  <div id="ex-transition">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

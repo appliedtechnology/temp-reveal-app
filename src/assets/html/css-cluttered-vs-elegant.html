@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .buttons-example {
+      text-align: center;
+    }
+    .cluttered {
+      --purple: #7f00ff;
+      --pink: #e100ff;
+    }
+    .cluttered > button {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      position: relative;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.75em 1.75em;
+      border-radius: 50px;
+      display: inline-block;
+      color: #fff;
+      background: linear-gradient(to right, var(--purple), var(--pink));
+      box-shadow: 0px 8px 20px var(--purple);
+    }
+
+    .cluttered > button:hover {
+      box-shadow: 0px 2px 20px var(--pink), 0px 4px 20px var(--purple);
+    }
+
+    .cluttered > button:active{
+      animation: shake 0.9s cubic-bezier(.36,.07,.19,.97) both;
+    }
+
+    @keyframes shake {
+      10%, 90% {
+        transform: translate3d(-1px, 0, 1px);
+      }
+
+      20%, 80% {
+        transform: translate3d(2px, -1px, 0);
+      }
+
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 1px, 1px);
+      }
+
+      40%, 60% {
+        transform: translate3d(4px, 2px, -1px);
+      }
+    }
+
+    .elegant {
+      --mainColor: #5f89fc;
+      --secondaryColor: #5f80ea;
+    }
+
+    .elegant > button {
+      background-color: var(--mainColor);
+      border: none;
+      outline: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      opacity: 1;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 6px;
+      user-select: none;
+    }
+
+    .elegant > button:hover {
+      opacity: 0.97;
+      box-shadow: 0 0 4px 0 rgba(0,0,0,0.3), 0 0 8px 0 rgba(0,0,0,0.5);
+    }
+
+    .elegant > button:active {
+      box-shadow: 0 0 6px 0 rgba(0,0,0,0.1), 0 0 10px 0 rgba(0,0,0,0.4);
+      opacity: 0.97;
+      transform: scale(0.99);
+      background-image: radial-gradient(var(--secondaryColor), var(--mainColor));
+      color: #eee;
+    }
+  </style>
+  <script>
+    function toggleButtons() {
+      const cluttered = document.querySelector('.buttons-example');
+
+      if (cluttered.classList.contains('cluttered')) {
+        cluttered.classList.remove('cluttered');
+        cluttered.classList.add('elegant');
+      } else {
+        cluttered.classList.remove('elegant');
+        cluttered.classList.add('cluttered');
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="buttons-example cluttered">
+    <button type="button">Click Me</button>
+    <button type="button">Click Me</button>
+    <button type="button">Click Me</button>
+    <button type="button">Click Me</button>
+  </div>
+  <button type="button" onclick="toggleButtons();" style="margin:10px auto;">Toggle layout</button>
+</body>
+</html>

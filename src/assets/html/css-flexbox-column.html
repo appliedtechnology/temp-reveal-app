@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      background-color: lightsteelblue;
+      max-width: 360px;
+    }
+
+    .wrapper > div {
+      background-color: #f1f1f1;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      font-size: 3em;
+    }
+  </style>
+  <script>
+    function setFlexDirection(direction) {
+      const el = document.querySelector('.wrapper');
+      el.style['flex-direction'] = direction;
+    }
+
+    function addBox(c) {
+      const el = document.querySelector('.wrapper');
+      const div = document.createElement('div');
+      div.innerText = c;
+      el.appendChild(div);
+    }
+
+    function reset() {
+      const el = document.querySelector('.wrapper');
+      while (el.firstChild) {
+        el.removeChild(el.firstChild);
+      }
+      addBox('a');
+      addBox('b');
+      addBox('c');
+    }
+  </script>
+</head>
+<body>
+  <p>Wrapper has a max width</p>
+  <div class="controls">
+    <button type="button" onclick="setFlexDirection('row')">row</button>
+    <button type="button" onclick="setFlexDirection('column')">col</button>
+    <button type="button" onclick="addBox('x')">add</button>
+    <button type="button" onclick="reset()">reset</button>
+  </div>
+  <div class="wrapper">
+    <div>a</div>
+    <div>b</div>
+    <div>c</div>
+  </div>
+</body>
+</html>

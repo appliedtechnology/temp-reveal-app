@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <div id="handlebars-demo"><p>Replace Me</p></div>
+  <button onclick="handlebarsExample();">Run</button>
+  <button onclick="handlebarsExample(true);">Clear</button>
+  <script>
+    function handlebarsExample(clear = false) {
+      const el = document.querySelector('#handlebars-demo');
+      if (clear) {
+        el.innerHTML = '<p>Replace Me</p>';
+      } else {
+        el.innerHTML = '<p>Class of Spring21 spends 1 days on learning Handlebars.</p>';
+      }
+    }
+  </script>
+</body>
+</html>

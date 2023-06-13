@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <div id="sync-ex-container"></div>
+  <button onclick="syncExample();">Run</button>
+  <button onclick="syncExample(true);">Clear</button>
+  <script>
+    let syncExampleHasContent = false;
+
+    function syncExample(clear = false) {
+      const el = document.getElementById('sync-ex-container');
+      if (clear) {
+        el.innerHTML = '';
+        syncExampleHasContent = false;
+      } else if (!syncExampleHasContent) {
+        syncExampleHasContent = true;
+        doSyncExample()
+      }
+    }
+
+    function heavyCalcSync(iterations) {
+      while (iterations > 0) {
+        iterations--
+      }
+      return 'Heavy calc done!';
+    }
+
+    function doSyncExample() {
+      const el = document.getElementById('sync-ex-container');
+
+      el.innerHTML += 'Before<br>';
+      el.innerHTML += heavyCalcSync(5999999999);
+      el.innerHTML += '<br>After';
+    }
+  </script>
+</body>
+</html>

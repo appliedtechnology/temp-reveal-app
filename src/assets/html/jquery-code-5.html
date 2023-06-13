@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <style>
+    .wrapper {
+      display: flex;
+      flex-flow: column;
+    }
+    .box-wrapper {
+      display: flex;
+      flex-flow: row;
+    }
+    .box {
+      width:80px;
+      height:80px;
+    }
+    .green { background-color: green; }
+    .blue { background-color: blue; }
+    .red { background-color: red; }
+  </style>
+  <div class="wrapper">
+    <div class="box-wrapper">
+      <div class="box green"></div>
+    </div>
+    <div class="box-controls">
+      <button id="box-prepend">Prepend</button>
+      <button id="box-append">Append</button>
+    </div>
+    <div class="list-wrapper">
+      <ol>
+        <li>one</li>
+        <li>two</li>
+      </ol>
+    </div>
+    <div class="list-controls">
+      <button id="list-prepend">Prepend List</button>
+      <button id="list-append">Append List</button>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script></body>
+  <script>
+    $(document).ready(() => {
+      $('#box-prepend').click(() => {
+        $('.box-wrapper').prepend('<div class="box blue"></div>');
+      });
+
+      $('#box-append').click(() => {
+        $('.box-wrapper').append('<div class="box red"></div>');
+      });
+
+      $('#list-prepend').click(() => {
+        $('.list-wrapper > ol').prepend('<li>prepended</li>');
+      });
+
+      $('#list-append').click(() => {
+        $('.list-wrapper > ol').append('<li>appended</li>');
+      });
+    });
+  </script>
+</body>
+</html>

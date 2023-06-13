@@ -1,0 +1,46 @@
+@import "~reveal.js/css/theme/template/mixins";
+@import "~reveal.js/css/theme/template/settings";
+
+@import "~reveal.js/lib/font/source-sans-pro/source-sans-pro.css";
+
+$saltBlue: #5583a5;
+
+$backgroundColor: #f6f8fa;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$highlightColor: #ff00de;
+$highlightColorGreen: #2c9d0d;
+$highlightColorRed: #b10e0e;
+$highlightColorBlue: #2036b3;
+
+$mainFontSize: 32px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: #222;
+  }
+}
+
+.reveal .slides section .fragment.highlight-green.visible {
+  color: $highlightColorGreen;
+}
+
+@import "~reveal.js/css/theme/template/theme";
+// highlight.js style
+@import "~highlight.js/styles/atom-one-light.css";

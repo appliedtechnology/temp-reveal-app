@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>salt</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="/node_modules/reveal.js/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/node_modules/reveal.js/css/reveal.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/salt.css">
+  <link rel="stylesheet" href="/node_modules/highlight.js/styles/atom-one-dark.css" id="theme">
+</head>
+<body>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: helvetica;
+      overflow: scroll!important;
+    }
+    #container {
+      height: 300vh;
+    }
+    #salt-logo {
+      z-index: -1;
+    }
+    .meta {
+      padding: 10px;
+      float: right;
+      font-size: 30px;
+    }
+    #inner .meta {
+      float: left;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    code {
+      font-size: 2em;
+    }
+    #outer {
+      height: 600px;
+      width: 500px;
+      background-color: peachpuff;
+      top: 0;
+      left: 300px;
+    }
+    #inner {
+      background-color: mediumaquamarine;
+      height: 500px;
+      width: 200px;
+      top: 200px;
+      right: 175px;
+    }
+  </style>
+  <header style="height:100px;background:white;position:relative">
+    <h1>Your standard header</h1>
+  </header>
+  <div id="container">
+    <div id="outer">
+      <div class="meta">
+        <h1>Outer</h1>
+        <p>
+          <input type="radio" name="outer" id="outer-static" value="outer-static" checked>
+          <label for="outer-static">Static</label>
+        </p>
+        <p>
+          <input type="radio" name="outer" id="outer-relative" value="outer-relative">
+          <label for="outer-relative">Relative</label>
+        </p>
+        <p>
+          <input type="radio" name="outer" id="outer-absolute" value="outer-absolute">
+          <label for="outer-absolute">Absolute</label>
+        </p>
+        <p>
+          <input type="radio" name="outer" id="outer-fixed" value="outer-fixed">
+          <label for="outer-fixed">Fixed</label>
+        </p>
+        <p>
+          <input type="radio" name="outer" id="outer-sticky" value="outer-sticky">
+          <label for="outer-sticky">Sticky</label>
+        </p>
+      </div>
+      <div id="inner">
+        <div class="meta">
+          <h1>Inner <div></h1>
+          <p>
+            <input type="radio" name="inner" id="inner-static" value="inner-static" checked>
+            <label for="inner-static">Static</label>
+          </p>
+          <p>
+            <input type="radio" name="inner" id="inner-relative" value="inner-relative">
+            <label for="inner-relative">Relative</label>
+          </p>
+          <p>
+            <input type="radio" name="inner" id="inner-absolute" value="inner-absolute">
+            <label for="inner-absolute">Absolute</label>
+          </p>
+          <p>
+            <input type="radio" name="inner" id="inner-fixed" value="inner-fixed">
+            <label for="inner-fixed">Fixed</label>
+          </p>
+        </div>
+      </div>
+    </div>
+    <pre class="hljs html" style="position:absolute;top:80px;right:0;z-index:-1;"><code>
+&lt;body&gt;
+&lt;header style=&quot;height:100px;&quot;&gt;
+  Your standard header
+&lt;/header&gt;
+&lt;div id=&quot;outer&quot;&gt;
+  &lt;div id=&quot;inner&quot;&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+    <pre class="hljs css" style="position:absolute;top:355px;right:0;z-index:-1;"><code>
+#outer {
+  height: 600px;
+  width: 500px;
+  background-color: peachpuff;
+  top: 0;
+  left: 300px;
+}
+#inner {
+  background-color: mediumaquamarine;
+  height: 500px;
+  width: 200px;
+  top: 200px;
+  right: 175px;
+}
+</code></pre>
+    <script>
+      document.addEventListener('change', (e) => {
+        setPositionFor(...e.target.value.split('-'))
+      })
+      function setPositionFor(selection, position) {
+        const el = document.getElementById(selection);
+        el.style.position = position;
+      }
+    </script>
+  </div>
+</body>
+</html>

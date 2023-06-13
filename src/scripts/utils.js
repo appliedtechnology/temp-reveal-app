@@ -1,0 +1,1 @@
+export const isCurrentUrlPrintUrl = () => window.location.search.match(/print-pdf/gi);

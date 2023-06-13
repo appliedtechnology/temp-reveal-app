@@ -1,0 +1,12 @@
+// reveal.js default style
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~reveal.js/css/reset";
+@import "~reveal.js/css/reveal";
+
+// reveal.js theme
+@import "theme";
+
+@import "additions";

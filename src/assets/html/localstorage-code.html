@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <div>
+    <input type="text" id="demo-storage-input">
+    <button type="button" onclick="saveFoo('demo-storage-input');">Save</button>
+  </div>
+  <hr />
+  <div>
+    <button type="button" onclick="showFoo('demo-storage-show');">Get From Storage</button>
+    <strong id="demo-storage-show" style="font-size:24px;"></strong>
+  </div>
+  <hr />
+  <div>
+    <button type="button" onclick="clearFoo();" style="width:180px;">Clear Storage</button>
+  </div>
+  <script>
+  function saveFoo(id) {
+    const el = document.getElementById(id);
+    window.localStorage.setItem('foo', el.value);
+  }
+
+  function showFoo(id) {
+    const value = window.localStorage.getItem('foo');
+    const el = document.getElementById(id);
+    el.innerHTML = value;
+  }
+
+  function clearFoo() {
+    window.localStorage.removeItem('foo');
+  }
+  </script>
+</body>
+</html>

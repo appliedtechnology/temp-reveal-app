@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <div id="mustache-demo"><p>Replace Me</p></div>
+  <button onclick="mustacheExample();">Run</button>
+  <button onclick="mustacheExample(true);">Clear</button>
+  <script>
+    function mustacheExample(clear = false) {
+      const el = document.querySelector('#mustache-demo');
+      if (clear) {
+        el.innerHTML = '<p>Replace Me</p>';
+      } else {
+        const view = {
+          title: "Joe",
+          calc: function () {
+            return 2;
+          },
+          engine: "Mustache"
+        };
+        el.innerHTML = '<p>Joe spends 2 days on learning Mustache.</p>';
+      }
+    }
+  </script>
+</body>
+</html>

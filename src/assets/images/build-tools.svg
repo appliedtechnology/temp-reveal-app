@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024px" height="768px" viewBox="0 0 1024 768">
+<defs>
+<style type="text/css"> @import url(https://fonts.googleapis.com/css?family=Chela+One:400:latin-ext); </style>
+</defs>
+<clipPath id="cp1">
+<path d="M 0,0 L 1024,0 L1024,768 L 0,768 z M 0,0 L 1280,0 L 1280,960 L 0,960 z" fill-rule="evenodd">
+</path>
+</clipPath>
+<g clip-path="url(#cp1)">
+</g>
+<rect x="0" y="0" width="1280" height="960" opacity="1" fill="#ffffff" stroke="none">
+</rect>
+<text x="-209.12681579589844" y="25.551489599999996" style="font: normal 255.51489600000002px 'Chela One'" text-anchor="start" dy="100.99403003952571" opacity="1" fill="rgb(156,219,255)" fill-opacity="1" stroke="none" transform="translate(510, 384)">npm</text>
+<text x="-210.09967041015625" y="17.034326399999998" style="font: normal 170.343264px 'Chela One'" text-anchor="start" dy="67.32935335968381" opacity="1" fill="rgb(255,146,211)" fill-opacity="1" stroke="none" transform="translate(482, 284)">Maven</text>
+<text x="-148.68258666992188" y="8.517163199999999" style="font: normal 85.171632px 'Chela One'" text-anchor="start" dy="33.664676679841904" opacity="1" fill="#9d4040" stroke="none" transform="translate(554, 544)">Leiningen</text>
+<text x="-105.76354217529297" y="8.517163199999999" style="font: normal 85.171632px 'Chela One'" text-anchor="start" dy="33.664676679841904" opacity="1" fill="#9000a8" stroke="none" transform="translate(496, 210) rotate(-13.07050789125494)">Grapes</text>
+<text x="-96.39677429199219" y="8.517163199999999" style="font: normal 85.171632px 'Chela One'" text-anchor="start" dy="33.664676679841904" opacity="1" fill="rgb(255,146,211)" fill-opacity="1" stroke="none" transform="translate(510, 612)">Nuget</text>
+<text x="-89.7967529296875" y="8.517163199999999" style="font: normal 85.171632px 'Chela One'" text-anchor="start" dy="33.664676679841904" opacity="1" fill="#314ed4" stroke="none" transform="translate(316, 508)">Cargo</text>
+<text x="-75.3626937866211" y="8.517163199999999" style="font: normal 85.171632px 'Chela One'" text-anchor="start" dy="33.664676679841904" opacity="1" fill="#9000a8" stroke="none" transform="translate(470, 156)">Yarn</text>
+<text x="-77.06636810302734" y="8.517163199999999" style="font: normal 85.171632px 'Chela One'" text-anchor="start" dy="33.664676679841904" opacity="1" fill="#9000a8" stroke="none" transform="translate(682, 208) rotate(-19.410641015752375)">PyPi</text>
+<text x="-65.10191345214844" y="8.517163199999999" style="font: normal 85.171632px 'Chela One'" text-anchor="start" dy="33.664676679841904" opacity="1" fill="rgb(255,121,97)" fill-opacity="1" stroke="none" transform="translate(752, 308)">SBT</text>
+<text x="-51.77497100830078" y="8.517163199999999" style="font: normal 85.171632px 'Chela One'" text-anchor="start" dy="33.664676679841904" opacity="1" fill="rgb(156,219,255)" fill-opacity="1" stroke="none" transform="translate(354, 576)">Ivy</text>
+<text x="-40.57701110839844" y="8.517163199999999" style="font: normal 85.171632px 'Chela One'" text-anchor="start" dy="33.664676679841904" opacity="1" fill="#31a5d4" stroke="none" transform="translate(750, 372)">Go</text>
+</svg>

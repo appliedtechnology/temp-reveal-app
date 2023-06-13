@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <h2>This is a heading</h2>
+  <p style="background-color:red">This is a paragraph.</p>
+  <p style="background-color:green">This is a paragraph.</p>
+  <p style="background-color:blue">This is a paragraph.</p>
+  <p>This is a paragraph.</p>
+  <button>Change CSS on all</button>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script></body>
+  <script>
+    $(document).ready(() => {
+      $('button').click(() => {
+        $('p').css({
+          'background-color': 'gold',
+          'font-size': '150%',
+          'margin': '1px 0 1px 0'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

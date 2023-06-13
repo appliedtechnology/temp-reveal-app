@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+  <style>
+    .jquery-example {
+      --box-height: 80px;
+    }
+    .wrapper {
+      border: 1px solid gray;
+      position: relative;
+      height: var(--box-height);
+    }
+    .box {
+      width: 100%;
+      height: var(--box-height);
+    }
+    .box-content {
+      display: none;
+    }
+    .red { background-color: red; }
+    .green { background-color: green; }
+    .blue { background-color: blue; }
+  </style>
+  <div class="jquery-example">
+    <div style="display: grid; grid-template-columns: 1fr;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-column-gap: 1px;">
+        <div class="wrapper">
+          <div class="box box-content red" id="red"></div>
+        </div>
+        <div class="wrapper">
+          <div class="box box-content green" id="green"></div>
+        </div>
+        <div class="wrapper">
+          <div class="box box-content blue" id="blue"></div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-column-gap: 1px;">
+        <button id="fadein-boxes-btn">Fade in boxes</button>
+        <button id="fadeout-boxes-btn">Fade out boxes</button>
+        <button id="fadetoggle-boxes-btn">Fade in/out boxes</button>
+        <button id="fadeto-boxes-btn">Fade boxes</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script></body>
+  <script>
+    $(document).ready(() => {
+      $('#fadein-boxes-btn').click(() => {
+        $('#red').fadeIn('slow');
+        $('#green').fadeIn();
+        $('#blue').fadeIn(3000);
+      });
+
+      $('#fadeout-boxes-btn').click(() => {
+        $('#red').fadeOut('slow');
+        $('#green').fadeOut();
+        $('#blue').fadeOut(3000);
+      });
+    });
+    $(document).ready(() => {
+      $('#fadetoggle-boxes-btn').click(() => {
+        $('#red').fadeToggle('slow');
+        $('#green').fadeToggle();
+        $('#blue').fadeToggle(3000);
+      });
+
+      $('#fadeto-boxes-btn').click(() => {
+        $('#red').fadeTo('slow', 0.15);
+        $('#green').fadeTo('slow', 0.4);
+        $('#blue').fadeTo('slow', 0.7);
+      });
+    });
+  </script>
+</body>
+</html>

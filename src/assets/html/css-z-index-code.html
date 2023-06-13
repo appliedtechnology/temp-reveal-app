@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    #ex-zidx {
+      --dim: 80px;
+      position: relative;
+      height: var(--dim);
+      text-align: left;
+    }
+    .ex-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: var(--dim);
+      background-color: #c5c5c5;
+      z-index: 1;
+    }
+    #ex-zidx > p {
+      position: relative;
+    }
+  </style>
+  <script>
+    function zIndex() {
+      const ps = document.querySelectorAll('#ex-zidx > p');
+      ps.forEach(p => p.style['z-index'] = 1);
+    }
+  </script>
+</head>
+<body>
+  <div id="ex-zidx">
+    <img class="ex-img">
+    <p>The image is has absolute positioning, while the paragraph has static positioning.</p>
+    <p>This means that the image is placed above the paragraph. We can overcome this by lowering the z-index of the image.</p>
+  </div>
+  <button type="button" onclick="zIndex();">Send to back</button>
+</body>
+</html>
