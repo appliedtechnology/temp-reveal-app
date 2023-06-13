@@ -78,17 +78,17 @@ module.exports = {
       inject: true,
       chunks: ['index'],
     }),
-    new FriendlyErrorsWebpackPlugin({
-      compilationSuccessInfo: {
-        messages: [
-          "</SALT> Slides available here: http://localhost:4000",
-          "Search: http://localhost:4000/search",
-          "",
-          "Speaker notes accessible by pressing »S« key",
-          "Pressing »O« key will bring up the overview",
-        ],
-      },
-    }),
+    // new FriendlyErrorsWebpackPlugin({
+    //   compilationSuccessInfo: {
+    //     messages: [
+    //       "</SALT> Slides available here: http://localhost:4000",
+    //       "Search: http://localhost:4000/search",
+    //       "",
+    //       "Speaker notes accessible by pressing »S« key",
+    //       "Pressing »O« key will bring up the overview",
+    //     ],
+    //   },
+    // }),
     new CopyPlugin([{ from: "src/assets", to: "assets" }]),
   ],
   devServer: {
