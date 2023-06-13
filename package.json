@@ -2,7 +2,7 @@
   "name": "salt-slides",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --config ./config/webpack.config.js",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --config ./config/webpack.config.js",
     "lint": "eslint src/**/*.js"
   },
   "engines": {
